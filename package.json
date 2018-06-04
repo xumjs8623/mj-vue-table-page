@@ -1,19 +1,30 @@
 {
   "name": "vue-admin-element",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.2",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
+  "keywords": [
+    "element",
+    "vue",
+    "vue.js",
+    "component",
+    "components",
+    "ui",
+    "framework"
+  ],
+  "main": "src/index.js",
+
   "dependencies": {
-    "vue": "^2.5.16",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
     "@vue/cli-plugin-unit-mocha": "^3.0.0-beta.15",
@@ -29,5 +40,11 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "author": "Aresn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xumjs8623/vue-admin-element"
+  }
 }
