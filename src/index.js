@@ -1,5 +1,10 @@
-import aaa from './component/aaa'
+import TablePagetaion from './component/tablePagetaion/main.vue'
+const components = [
+  TablePagetaion
+]
 const install = (Vue) => {
-  Vue.component('aaa', aaa)
+  components.map(component => {
+    Vue.component(component.name, component)
+  })
 }
 export default {install}
