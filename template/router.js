@@ -1,21 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
+import MjTablePagetion from './views/MjTablePagetion.vue'
+import MjForm from './views/MjForm.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: '/mjTablePagetion',
+      component: MjTablePagetion
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About
+      path: '/mjForm',
+      component: MjForm
     }
   ]
 })

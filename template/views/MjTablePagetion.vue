@@ -1,5 +1,5 @@
 <template>
-  <table-pagetaion @setSelection="setSelection" :tableFrame="tablePagetaion.tableFrame" :apiAction="tablePagetaion.apiAction" :searchTag="tablePagetaion.searchTag" :searchKeyword="tablePagetaion.searchKeyword"></table-pagetaion>
+  <mj-table-pagetaion @setSelection="setSelection" :tableFrame="tablePagetaion.tableFrame" :apiAction="tablePagetaion.apiAction" :searchTag="tablePagetaion.searchTag" :searchKeyword="tablePagetaion.searchKeyword"></mj-table-pagetaion>
 </template>
 <script>
 import axios from 'axios'

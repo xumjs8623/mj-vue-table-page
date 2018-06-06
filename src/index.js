@@ -1,6 +1,8 @@
-import TablePagetaion from './component/tablePagetaion/main.vue'
+import MjTablePagetaion from './component/mjTablePagetaion/main.vue'
+import MJForm from './component/mjForm/main.vue'
 const components = [
-  TablePagetaion
+  MjTablePagetaion,
+  MJForm
 ]
 const install = (Vue) => {
   components.map(component => {

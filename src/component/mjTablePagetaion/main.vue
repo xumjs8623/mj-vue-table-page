@@ -34,7 +34,7 @@ privilegeId 权限id String
 <script>
 import tableColumn from './column'
 export default {
-  name: 'tablePagetaion',
+  name: 'mjTablePagetaion',
   components: {
     tableColumn
   },
