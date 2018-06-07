@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-form ref="form" :model="form" :rules="rules">
+      <el-form ref="form" :model="form" :rules="rules">
         <el-form-item v-for="(item, index) in formData" :key="index" :label="item.label" label-width="80px" :prop="item.field">
           <!-- 文本输入类型 -->
           <template v-if="item.type === 'text'">
@@ -29,9 +29,9 @@
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="onSubmit('form')">提交</el-button>
-          <el-button>取消</el-button>
+          <el-button @click="cancle">取消</el-button>
         </el-form-item>
-    </el-form>
+      </el-form>
   </div>
 </template>
 <script>
@@ -59,6 +59,13 @@ export default {
       return formRules
     }
   },
+  watch: {
+    '$attrs.visible': function (newValue) {
+      if (!newValue) {
+        this.$refs.form.resetFields()
+      }
+    }
+  },
   props: {
     formData: {
       type: Array,
@@ -78,6 +85,10 @@ export default {
           return false
         }
       })
+    },
+    // 取消按钮
+    cancle () {
+      this.$emit('cancle')
     }
   }
 }

@@ -1,7 +1,9 @@
 <template>
   <div>
-    <el-dialog title="" :visible.sync="dialogTag">
-      <mj-form :formData="formData" @getValue="getValue"></mj-form>
+    <el-button type="primary" @click="dialogTag=true">打开表单弹窗</el-button>
+    <el-button type="primary" @click="dialogTag=false">关闭表单弹窗</el-button>
+    <el-dialog title="" :visible="dialogTag">
+      <mj-form :visible="dialogTag" :formData="formData" @getValue="getValue" @cancle="dialogTag=false"></mj-form>
     </el-dialog>
   </div>
 </template>
