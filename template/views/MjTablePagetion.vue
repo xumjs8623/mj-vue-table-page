@@ -1,5 +1,5 @@
 <template>
-  <mj-table-pagetaion @setSelection="setSelection" :tableFrame="tablePagetaion.tableFrame" :apiAction="tablePagetaion.apiAction" :searchTag="tablePagetaion.searchTag" :searchKeyword="tablePagetaion.searchKeyword"></mj-table-pagetaion>
+  <mj-table-pagetaion @getSelection="getSelection" :tableFrame="tablePagetaion.tableFrame" :apiAction="tablePagetaion.apiAction" :searchTag="tablePagetaion.searchTag" :searchKeyword="tablePagetaion.searchKeyword"></mj-table-pagetaion>
 </template>
 <script>
 import axios from 'axios'
@@ -46,7 +46,7 @@ export default {
     }
   },
   methods: {
-    setSelection (val) {
+    getSelection (val) {
       console.log(val)
     }
   }

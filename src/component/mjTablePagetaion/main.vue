@@ -175,7 +175,7 @@ export default {
       }
     },
     handleSelectionChange (val) {
-      this.$emit('setSelection', val)
+      this.$emit('getSelection', val)
     },
     // 单选操作
     handleCurrentChange (row) {
