@@ -1,5 +1,6 @@
 # vue-admin-element
 > vue-admin-element是一套基于element-ui封装的组件，主要目的是快速生成后台信息管理界面，减少在项目中的重复代码
+
 ## 安装
 ```
 npm install vue-admin-element
