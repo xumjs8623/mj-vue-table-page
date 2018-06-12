@@ -17,12 +17,19 @@ Vue.use(vueAdmin)
 
 ### 表格分页组件
 ```js
-<mj-table-pagetaion @getSelection="getSelection" :tableFrame="tablePagetaion.tableFrame" :apiAction="tablePagetaion.apiAction" :searchTag="tablePagetaion.searchTag" :searchKeyword="tablePagetaion.searchKeyword"></mj-table-pagetaion>
+<mj-table-pagetaion :tableConfig="{extend: true}" @getSelection="getSelection" :tableFrame="tablePagetaion.tableFrame" :apiAction="tablePagetaion.apiAction" :searchTag="tablePagetaion.searchTag" :searchKeyword="tablePagetaion.searchKeyword">
+<template slot-scope="slots">
+  <div>
+    <el-button>{{slots.row.name}}</el-button>
+  </div>
+</template>
+</mj-table-pagetaion>
 ```
 #### 参数
 |参数|说明|类型|可选值|默认值|
 |-|-|-|-|-|
-| tableFrame| 表格结构 | Object|—|—|
+| tableConfig| 表格配置参数 | Object|—|—|
+| tableFrame| 表格结构 | Array|—|—|
 | apiAction| 请求数据的函数 | Function|—|—|
 | searchTag| 搜索标签 | Boolean|—|—|
 | searchKeyword| 搜索关键词 | Object |—|—|
@@ -33,7 +40,12 @@ Vue.use(vueAdmin)
 | getSelection | 获取复选框选中的值 | rows
 #### 示例
 ```js
-tableFrame: {
+tableConfig: {
+  extend: true // 配置extend之后,组件中写的slot才会生效，主要用于table下拉功能
+}
+```
+```js
+tableFrame: [
   {
     prop: 'name',
     label: '姓名'
@@ -50,7 +62,7 @@ tableFrame: {
       )
     }
   }
-}
+]
 ```
 ```js
 apiAction: (params) => {

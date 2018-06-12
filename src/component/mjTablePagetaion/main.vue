@@ -15,7 +15,13 @@ privilegeId 权限id String
           type="selection"
           width="55">
         </el-table-column>
-        <table-column v-bind="item" v-for="(item, key) in tableFrame" :key="key"></table-column>
+        <el-table-column type="expand" v-if="tableConfig && tableConfig.extend">
+          <template slot-scope="props">
+            <slot v-bind="props">
+            </slot>
+          </template>
+        </el-table-column>
+        <table-column v-for="(item, index) in tableFrame" v-bind="item" :key="index"></table-column>
       </el-table>
     </el-col>
     <el-col :span="24" class="common-page">
