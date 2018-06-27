@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-element",
-  "version": "1.0.4",
+  "version": "1.0.13",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -19,7 +19,8 @@
     "framework"
   ],
   "main": "src/index.js",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.15",

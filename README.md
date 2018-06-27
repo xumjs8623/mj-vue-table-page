@@ -174,3 +174,55 @@ cancle: () => {
   // 一般用于点击取消按钮以后，关闭弹窗所用
 }
 ```
+
+### 动态标签页
+```js
+<mj-tags :menusData=menusData @jump="jump" @close="close"></mj-tags>
+```
+#### 参数
+|参数|说明|类型|可选值|默认值|
+|-|-|-|-|-|
+| menusData| 菜单数据 | Array|—|—|
+
+#### 事件
+|方法名|说明|回调参数|
+|-|-|-|
+| jump | 点击标签后的跳转 | url|
+| close | 点击关闭标签后的跳转 | url|
+
+### 示例
+```js
+menusData: [
+  {
+    name: '首页',
+    url: '/'
+  },
+  {
+    name: '用户管理',
+    icon: 'user'
+    children: [
+      {
+        name: '用户新增',
+        url: 'userAdd'
+      }
+    ]
+  },
+  {name: '产品分类', url: '/category'}
+]
+```
+```js
+// 返回的都是处理好的url, 只要判断一下是否存在，直接跳转即可
+jump (url) {
+  if (url) {
+    this.$router.push(url)
+  }
+},
+```
+```js
+// 返回的都是处理好的url, 只要判断一下是否存在，直接跳转即可
+close (url) {
+  if (url) {
+    this.$router.push(url)
+  }
+}
+```
