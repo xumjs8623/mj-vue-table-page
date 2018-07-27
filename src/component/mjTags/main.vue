@@ -36,7 +36,7 @@ export default {
     }
   },
   mounted () {
-    this.addTag(this.$route.fullPath)
+    this.addTag(this.$route.path)
     this.initWidth = this.$refs.tags.clientWidth
     console.log(this.$refs.tags.clientWidth)
     window.onresize = () => {
@@ -49,7 +49,7 @@ export default {
   },
   watch: {
     '$route': function (value) {
-      this.addTag(value.fullPath)
+      this.addTag(value.path)
     }
   },
   methods: {
