@@ -1,23 +1,30 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import MjTablePagetion from './views/MjTablePagetion.vue'
+import MjForm from './views/MjForm.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: '',
+      component: () => import('./views/Home.vue')
     },
+    // 列表分页
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/mjTablePagetion',
+      component: MjTablePagetion
+    },
+    // 表单
+    {
+      path: '/mjForm',
+      component: MjForm
+    },
+    // 动态标签
+    {
+      path: '/mjTags',
+      component: () => import('./views/MjTags.vue')
     }
   ]
 })
