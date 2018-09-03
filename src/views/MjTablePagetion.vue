@@ -1,5 +1,5 @@
 <template>
-  <mj-table-pagetaion :dbClick="dbClick" :tableConfig="{extend: true}" @getSelection="getSelection" :tableFrame="tablePagetaion.tableFrame" :apiAction="tablePagetaion.apiAction" :searchTag="tablePagetaion.searchTag" :searchKeyword="tablePagetaion.searchKeyword">
+  <mj-table-pagetaion :dbClick="dbClick" :tableConfig="{extend: true, height: 400}" @getSelection="getSelection" :tableFrame="tablePagetaion.tableFrame" :apiAction="tablePagetaion.apiAction" :searchTag="tablePagetaion.searchTag" :searchKeyword="tablePagetaion.searchKeyword">
     <template slot-scope="slots">
       <div>
         <el-button>{{slots.row.name}}</el-button>
