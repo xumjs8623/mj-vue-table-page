@@ -29,7 +29,7 @@ privilegeId 权限id String
         @size-change="handleChangeSize"
         @current-change="handleChangeCurrent"
         :current-page="pages.currPage"
-        :page-sizes="[20, 50, 100, 200, 500, 1000]"
+        :page-sizes="[10, 50, 100, 200, 500, 1000]"
         :page-size="pages.pageSize"
         :layout="layout"
         :total="pages.total">

@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-element",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
