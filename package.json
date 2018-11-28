@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-element",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -30,7 +30,7 @@
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.16",
     "vuex": "^3.0.1",
-    "element-ui": "^2.4.5",
+    "element-ui": "^2.4.6",
     "vue": "^2.5.16"
   },
   "author": "MJ",

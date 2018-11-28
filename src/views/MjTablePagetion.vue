@@ -1,11 +1,13 @@
 <template>
-  <mj-table-pagetaion :dbClick="dbClick" :tableConfig="{extend: true, height: 400}" @getSelection="getSelection" :tableFrame="tablePagetaion.tableFrame" :apiAction="tablePagetaion.apiAction" :searchTag="tablePagetaion.searchTag" :searchKeyword="tablePagetaion.searchKeyword">
-    <template slot-scope="slots">
-      <div>
-        <el-button>{{slots.row.name}}</el-button>
-      </div>
-    </template>
-  </mj-table-pagetaion>
+  <div class="table-page">
+    <mj-table-pagetaion :dbClick="dbClick" @getSelection="getSelection" :tableFrame="tablePagetaion.tableFrame" :apiAction="tablePagetaion.apiAction" :searchTag="tablePagetaion.searchTag" :searchKeyword="tablePagetaion.searchKeyword">
+      <!-- <template slot-scope="slots">
+        <div>
+          <el-button>{{slots.row.name}}</el-button>
+        </div>
+      </template> -->
+    </mj-table-pagetaion>
+  </div>
 </template>
 <script>
 import axios from 'axios'
@@ -16,11 +18,36 @@ export default {
         tableFrame: [
           {
             prop: 'name',
-            label: '姓名'
+            label: '姓名',
+            width: '200'
           },
           {
             prop: 'age',
             label: '年龄'
+          },
+          {
+            prop: 'address',
+            label: '地址'
+          },
+          {
+            prop: 'address',
+            label: '地址'
+          },
+          {
+            prop: 'address',
+            label: '地址'
+          },
+          {
+            prop: 'address',
+            label: '地址'
+          },
+          {
+            prop: 'address',
+            label: '地址'
+          },
+          {
+            prop: 'address',
+            label: '地址'
           },
           {
             prop: 'address',
@@ -66,3 +93,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.table-page{
+  padding: 10px;
+}
+</style>

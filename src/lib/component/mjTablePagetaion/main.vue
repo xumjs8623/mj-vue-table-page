@@ -21,7 +21,7 @@ privilegeId 权限id String
             </slot>
           </template>
         </el-table-column>
-        <table-column v-for="(item, index) in tableFrame" v-bind="item" :key="index"></table-column>
+        <mj-column v-for="(item, index) in tableFrame" v-bind="item" :key="index"></mj-column>
       </el-table>
     </el-col>
     <el-col :span="24" class="common-page">
@@ -38,11 +38,11 @@ privilegeId 权限id String
   </el-row>
 </template>
 <script>
-import tableColumn from './column'
+import mjColumn from './column'
 export default {
   name: 'mjTablePagetaion',
   components: {
-    tableColumn
+    mjColumn
   },
   data () {
     return {
