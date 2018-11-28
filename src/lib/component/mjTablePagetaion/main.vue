@@ -11,10 +11,6 @@ privilegeId 权限id String
   <el-row>
     <el-col :span="24">
       <el-table v-bind="tableConfig" :data="tableData" border stripe size="mini" class="common-talbe" ref="multipleTable" @selection-change="handleSelectionChange" highlight-current-row @row-click="handleCurrentChange" @row-dblclick="dbClickFun">
-        <el-table-column
-          type="selection"
-          width="55">
-        </el-table-column>
         <el-table-column type="expand" v-if="tableConfig && tableConfig.extend">
           <template slot-scope="props">
             <slot v-bind="props">

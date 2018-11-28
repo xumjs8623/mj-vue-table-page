@@ -10,6 +10,7 @@ npm install vue-admin-element
 ```js
 // 引入vue-amap
 import vueAdmin from 'vue-admin-element'
+import 'vue-admin-element/dist/vue-admin-element.css'
 Vue.use(vueAdmin)
 ```
 
@@ -46,6 +47,10 @@ tableConfig: {
 ```
 ```js
 tableFrame: [
+  {
+    type: "selection",
+    width: "55"
+  },
   {
     prop: 'name',
     label: '姓名'

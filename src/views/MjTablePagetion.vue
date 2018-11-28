@@ -1,11 +1,11 @@
 <template>
   <div class="table-page">
-    <mj-table-pagetaion :dbClick="dbClick" @getSelection="getSelection" :tableFrame="tablePagetaion.tableFrame" :apiAction="tablePagetaion.apiAction" :searchTag="tablePagetaion.searchTag" :searchKeyword="tablePagetaion.searchKeyword">
-      <!-- <template slot-scope="slots">
+    <mj-table-pagetaion :tableConfig="{extend: true}" :dbClick="dbClick" @getSelection="getSelection" :tableFrame="tablePagetaion.tableFrame" :apiAction="tablePagetaion.apiAction" :searchTag="tablePagetaion.searchTag" :searchKeyword="tablePagetaion.searchKeyword">
+      <template slot-scope="slots">
         <div>
           <el-button>{{slots.row.name}}</el-button>
         </div>
-      </template> -->
+      </template>
     </mj-table-pagetaion>
   </div>
 </template>
@@ -16,6 +16,10 @@ export default {
     return {
       tablePagetaion: {
         tableFrame: [
+          {
+            type: "selection",
+            width: "55"
+          },
           {
             prop: 'name',
             label: '姓名',

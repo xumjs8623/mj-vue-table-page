@@ -10,6 +10,8 @@ const renderCell = {
     return <div class="cell">{ renderCell(h, data) }</div>
   }
 }
+console.log(123123)
+console.log(TableColumn)
 export default {
   extends: TableColumn, // 继承el-table-column
   props: {
