@@ -38,12 +38,10 @@ export default {
   mounted () {
     this.addTag(this.$route.path)
     this.initWidth = this.$refs.tags.clientWidth
-    console.log(this.$refs.tags.clientWidth)
     window.onresize = () => {
       setTimeout(() => {
         this.initWidth = this.$refs.initWidth.clientWidth
         this.setWidth()
-        console.log(this.initWidth)
       }, 500)
     }
   },
@@ -120,9 +118,6 @@ export default {
           tagAllWidth += Number(window.getComputedStyle(this.$refs.tag[x].$el).width.replace(/(px)$/ig, '')) + 10
         }
         if (this.initWidth - tagAllWidth < 0) {
-          console.log('计算margin-left')
-          console.log(this.initWidth)
-          console.log(tagAllWidth)
           this.marginLeft = String(this.initWidth - tagAllWidth) + 'px'
           this.tagsWidth = String(tagAllWidth) + 'px'
         } else {

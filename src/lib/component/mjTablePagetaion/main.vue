@@ -94,7 +94,7 @@ export default {
       type: Function,
       default: () => {
         return (value) => {
-          console.log(value)
+          // // console.log(value)
         }
       }
     },
